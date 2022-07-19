@@ -1,8 +1,9 @@
 # This is Git's per-user configuration file.
-[user]
-# Please adapt and uncomment the following lines:
-name = Mark Jentz
-	email = 1196441+jentz@users.noreply.github.com
+[include]
+  path = .config/git/gituser-default
+[includeIf "gitdir:~/code/p24/"]
+  path = .config/git/gituser-p24
+
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [init]

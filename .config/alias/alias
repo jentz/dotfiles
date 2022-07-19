@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+# +----+
+# | ls |
+# +----+
+alias ls='ls -G'
+alias l='ls -lah'
+
+# +----+
+# | cp |
+# +----+
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -i'
+
+# +------+
+# | grep |
+# +------+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# +--------+
+# | docker |
+# +--------+
+#alias docker='nerdctl'
+
+# +--------+
+# | k8s    |
+# +--------+
+alias k='kubectl'
+
+# +--------+
+# | tig    |
+# +--------+
+alias tis='tig status'
+alias til='tig log'
+alias tib='tig blame -C'

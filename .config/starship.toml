@@ -1,0 +1,12 @@
+
+[gcloud]
+disabled = true
+
+[java]
+style = "bright-purple"
+
+[kubernetes]
+disabled = false
+
+[shlvl]
+disabled = false
