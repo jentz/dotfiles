@@ -1,12 +1,26 @@
+[user]
+  name = Mark Jentz
+  email = 1196441+jentz@users.noreply.github.com
+  signingkey = xxx
 # This is Git's per-user configuration file.
-[include]
-  path = .config/git/gituser-default
-[includeIf "gitdir:~/code/p24/"]
-  path = .config/git/gituser-p24
-
+[includeIf "gitdir:~/code/volvo/gitlab/"]
+  path = .config/git/gituser-volvo
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+[commit]
+  gpgsign = true
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+  insteadOf = https://github.com/
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [core]
-	autocrlf = input
+  autocrlf = input
+[push]
+  autoSetupRemote = true
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true

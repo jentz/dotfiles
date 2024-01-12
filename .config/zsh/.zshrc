@@ -2,6 +2,8 @@
 
 source $HOME/.asdf/asdf.sh
 
+[[ -f $HOME/.config/op/plugins.sh ]] && source $HOME/.config/op/plugins.sh
+
 fpath=(${ASDF_DIR}/completions $fpath)
 
 if type brew &>/dev/null
@@ -44,6 +46,9 @@ source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 bindkey -e
 
-eval "$(direnv hook zsh)"
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
 
+eval "$(direnv hook zsh)"
+eval "$(atuin init zsh --disable-up-arrow)"
 eval "$(starship init zsh)"
