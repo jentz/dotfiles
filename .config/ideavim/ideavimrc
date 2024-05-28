@@ -2,12 +2,13 @@
 let mapleader=" "
 
 """ Plugins  --------------------------------
-set commentary
+Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
 
 "" Base Settings
 "" ========================================================
 
-set scrolloff=10
+set scrolloff=5
 set linenumber
 set showmode
 set showcmd
@@ -21,6 +22,31 @@ set visualbell
 " Use system clipboard
 set clipboard+=unnamed   
 
+inoremap jk <Esc>
+
+" Tab navigation
+nnoremap <A-n> :tabnext<CR>
+nnoremap <A-p> :tabprev<CR>
+
+" Pane navigation
+nnoremap <A-h> <C-w>h
+nnoremap <A-l> <C-w>l
+nnoremap <A-k> <C-w>k
+nnoremap <A-j> <C-w>j
 
 map <leader>s <Action>(SelectInProjectView)
 map <leader>a <Action>(Annotate)
+
+" Window splits
+map <leader>wv <Action>(SplitVertically)
+map <leader>ws <Action>(SplitHorizontally)
+map <leader>wu <Action>(Unsplit)
+map <leader>wm <Action>(MoveEditorToOppositeTabGroup)
+
+" Refactoring
+map <leader>rn <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
+map <leader>rv <Action>(IntroduceVariable)
+map <leader>rf <Action>(IntroduceField)
+map <leader>rs <Action>(ChangeSignature)
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
