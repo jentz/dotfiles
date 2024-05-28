@@ -25,6 +25,8 @@ compdef __start_kubectl k
 # setup zoxide
 eval "$(zoxide init zsh)"
 
+path+=("$HOME/bin")
+
 # add rancher desktop commands to the path
 path+=("$HOME/.rd/bin")
 export PATH
