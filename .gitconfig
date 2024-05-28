@@ -1,7 +1,7 @@
 [user]
   name = Mark Jentz
   email = 1196441+jentz@users.noreply.github.com
-  signingkey = xxx
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJDc+Wl2uDDj7ORFZBWmcPm4/6mZ/vrKc29TtuFXJKG4
 # This is Git's per-user configuration file.
 [includeIf "gitdir:~/code/volvo/gitlab/"]
   path = .config/git/gituser-volvo
