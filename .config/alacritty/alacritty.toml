@@ -1,4 +1,3 @@
-import = ["/Users/MJENTZ/.config/alacritty/dracula.toml"]
 
 [font]
 size = 13
@@ -22,3 +21,5 @@ style = "Regular"
 [window]
 option_as_alt = "both"
 
+[general]
+import = ["/Users/MJENTZ/.config/alacritty/dracula.toml"]

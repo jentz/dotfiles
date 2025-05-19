@@ -1,10 +1,8 @@
 #!/usr/bin/env zsh
 
-source $HOME/.asdf/asdf.sh
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 [[ -f $HOME/.config/op/plugins.sh ]] && source $HOME/.config/op/plugins.sh
-
-fpath=(${ASDF_DIR}/completions $fpath)
 
 if type brew &>/dev/null
 then
@@ -30,6 +28,15 @@ path+=("$HOME/bin")
 # add rancher desktop commands to the path
 path+=("$HOME/.rd/bin")
 export PATH
+
+ASDF_DATA_DIR="/Users/MJENTZ/.asdf"
+export ASDF_DATA_DIR
+
+path=("$ASDF_DATA_DIR/shims" $path)
+export PATH
+
+BAT_THEME="Dracula"
+export BAT_THEME
 
 HIST_STAMPS="yyyy-mm-dd"
 setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
